@@ -40,10 +40,10 @@ void loop() {
 
 void sms()
 {
-  //Serial.println ("Sending Message");
+  Serial.println ("Sending Message");
   sim.println("AT+CMGF=1");    //Sets the GSM Module in Text Mode
   delay(1000);
-  //Serial.println ("Set SMS Number");
+  Serial.println ("Set SMS Number");
   sim.println("AT+CMGS=\"" + number + "\"\r"); //Mobile phone number to send message
   delay(1000);
   String SMS = "Sample SMS is sending.....";   //sms content
